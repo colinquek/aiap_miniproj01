@@ -32,5 +32,34 @@
 | kw_avg_avg | Average shares any article obtained with the median performing keyword in the article |
 | shares | Number of times the article was shared (Target) |
 
-# EDA
-1. num_videos, 
+## Directory Structure
+```
+.
+├── data/
+│   └── mini_project_1_data.csv   # Raw input dataset
+├── src/
+│   ├── config.yaml               # Centralized pipeline configuration
+│   ├── data_preparation.py       # Data loading, cleaning, feature engineering & preprocessing
+│   └── model_training.py         # Splitting, baseline fitting, hyperparameter tuning & evaluation
+├── eda.ipynb                     # Exploratory Data Analysis & Prototyping Notebook
+├── main.py                       # Pipeline orchestrator script
+├── requirements.txt              # Cleaned dependency requirements
+└── README.md                     # Project documentation
+```
+
+---
+
+## Getting Started
+
+### 1. Environment Setup
+Activate your Anaconda environment and install dependencies:
+```bash
+conda activate aiap_miniproj01
+pip install -r requirements.txt
+```
+
+### 2. Execution
+Run the complete end-to-end pipeline from terminal:
+```bash
+python main.py
+```

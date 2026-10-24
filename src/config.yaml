@@ -1,0 +1,21 @@
+# AIAP Mini Project 1 Configuration
+file_path: './data/mini_project_1_data.csv'
+target_column: 'shares'
+log_target_column: 'log_shares'
+
+val_test_size: 0.2
+val_size: 0.5
+
+param_grid:
+  regressor__alpha: [0.001, 0.01, 0.1, 1.0, 10.0, 100.0]
+
+cv: 5
+scoring: 'r2'
+
+nominal_features:
+  - 'weekday'
+  - 'data_channel'
+
+drop_columns:
+  - 'ID'
+  - 'URL'
